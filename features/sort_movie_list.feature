@@ -22,8 +22,10 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  # your scenario here
+  When I have clicked the "Movie Title" of table head
+  Then I should see "Aladdin" before "Amelie" in table content
 
 Scenario: sort movies in increasing order of release date
-  # your scenario here
+  When I have clicked the "Release Date" of table head
+  Then I should see "1984-10-26 00:00:00 UTC" before "2004-11-05 00:00:00 UTC" in table content
 
